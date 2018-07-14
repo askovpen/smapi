@@ -48,5 +48,5 @@ script:
   - mkdir build
   - cd build
   - cmake .. "${CF}"
-  - cmake --build . -- VERBOSE=1
+  - cmake --build .
   - cpack
