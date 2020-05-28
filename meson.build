@@ -5,9 +5,9 @@ cc = meson.get_compiler('c')
 link_args = []
 compile_args = []
 
-  add_project_arguments(
-    '-I.',
-    language : 'c')
+add_project_arguments(
+  '-I'+meson.current_source_dir()+'/smapi',
+  language : 'c')
 
 if cc.get_id() == 'msvc'
   add_project_arguments(
@@ -58,7 +58,7 @@ headers = files([
   'smapi/old_msg.h'
 ])
 
-incdir = include_directories(['smapi'])
+incdir = include_directories(['.'])
 huskylib_proj = subproject('huskylib')
 huskylib_dep=huskylib_proj.get_variable('husky_dep')
 
