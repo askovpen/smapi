@@ -66,6 +66,7 @@ libsmapi = library('smapi', src,
 
 smapi_dep = declare_dependency(
   link_with: libsmapi,
+  dependencies: [huskylib_dep],
   include_directories : incdir)
 
 install_headers(headers, subdir: 'smapi')
