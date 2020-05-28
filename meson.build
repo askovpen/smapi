@@ -54,7 +54,7 @@ headers = files([
   'smapi/old_msg.h'
 ])
 
-incdir = include_directories('smapi')
+incdir = include_directories(['smapi','.'])
 huskylib_proj = subproject('huskylib')
 huskylib_dep=huskylib_proj.get_variable('husky_dep')
 
