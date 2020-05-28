@@ -70,3 +70,9 @@ smapi_dep = declare_dependency(
   include_directories : incdir)
 
 install_headers(headers, subdir: 'smapi')
+
+pkg = import('pkgconfig')
+
+pkg.generate(libsmapi,
+             name: 'smapi',
+             description: 'Squish MSGAPI0 library')
